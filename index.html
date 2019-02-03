@@ -73,14 +73,42 @@
 			<section class="search">
 				<h2>Заинтересовались?</h2>
 				<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-				<!--Здесь будет форма-->
+				<button class="button searchhotel-button" type="button">Поиск гостиницы в Седоне</button>
+				<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+					<p class="search-item">
+						<label for="search-date-arrival">Дата заезда:</label>
+						<input id="search-date-arrival" type="text" name="date-arrival" value="" placeholder="24 апреля 2017">
+						<img class="search-calendar" src="img/calendar.svg" alt="Нажмите на календарик для выбора даты заезда">
+					</p>
+					<p class="search-item">
+						<label for="search-date-departure">Дата выезда:</label>
+						<input id="search-date-departure" type="text" name="date-departure" value="" placeholder="4 июля 2017">
+						<img class="search-calendar" src="img/calendar.svg" alt="Нажмите на календарик для выбора даты вызда">
+					</p>
+					<p class="search-item">
+						<label for="search-number-adult">Взрослые:</label>
+						<span class="search-number-adults">
+							<button type="button" class="search-number-minus" aria-label="Уменьшить количество въезжающих взрослых">-</button>
+							<input id="search-number-adult" type="text" class="search-number" name="number-adults" value="2" maxlength="2">
+							<button type="button" class="search-number-plus" aria-label="Увеличить количество въезжающих взрослых">+</button>
+						</span>
+						<label for="search-number-kid">Дети:</label>
+						<span class="search-number-kids">
+							<button type="button" class="search-number-minus" aria-label="Уменьшить количество въезжающих взрослых">-</button>
+							<input id="search-number-kid" type="text" class="search-number" name="number-kids" value="0" maxlength="2">
+							<button type="button" class="search-number-plus" aria-label="Увеличить количество въезжающих взрослых">+</button>
+						</span>
+					</p>
+					
+					<button class="button" type="submit">Найти</button>
+				</form>
 			</section>
 			<footer class="main-footer">
 				<p class="footer-hashtag">#visitsedona</p>
 				<ul class="footer-social">
-					<li><a class="social-button" href="#">Твиттер</a></li>
-					<li><a class="social-button" href="#">Фейсбук</a></li>
-					<li><a class="social-button" href="#">Youtube</a></li>
+					<li><a class="social-button social-button-twitter" href="#">Твиттер</a></li>
+					<li><a class="social-button social-button-facebook" href="#">Фейсбук</a></li>
+					<li><a class="social-button social-button-youtube" href="#">Youtube</a></li>
 				</ul>
 				<p class="footer-copyright">
 					<span>websity by</span>
