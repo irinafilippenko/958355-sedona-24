@@ -23,7 +23,54 @@
 			<h1 class="visually-hidden">Выбор гостиницы в городке Седона</h1>
 			<section class="selection">
 				<h2 class="visually-hidden">Выбор гостиницы по предлагаемым параметрам</h2>
-				<!--Здесь будет форма-->
+				<div class="select-parameters">
+				<form class="select"  metod="get" action="https://echo.htmlacademy.ru" oninput="minpriceoutput.value=minprice.value,maxpriceoutput.value=maxprice.value">
+					<fieldset>
+						<legend>Инфраструктура:</legend>
+						<ul>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="swimming-pool" id="select-swimming-pool" checked>
+							<label for="select-swimming-pool">Бассейн</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="parking" id="select-parking">
+							<label for="select-parking">Парковка</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="wifi" id="select-wifi">
+							<label for="select-wifi">Wi-fi</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Тип жилья:</legend>
+						<ul>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="hotel" id="select-hotel" checked>
+							<label for="select-hotel">Гостиница</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="motel" id="select-motel" checked>
+							<label for="select-motel">Мотель</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="apartments" id="select-apartments" checked>
+							<label for="select-apartments">Апартаменты</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+					<legend>Стоимость в сутки (р):</legend>
+						<ul>
+							<li class="select-price">от <output name="minpriceoutput">0</output></li>
+							<li class="select-price">до <output name="maxpriceoutput">3000</output></li>
+							</ul>
+						<input type="range" class="select-price-range select-price-min" name="minprice" min="0" max="2999" step="1">
+						<input type="range" class="select-price-range select-price-max" name="maxprice" min="1" max="3000" step="1">
+					</fieldset>	
+						<button type="submit" class="select-button">Показать</button>
+				</form>
+				</div>
 			</section>
 			<section class="hotels">
 				<h2>найдено:3</h2>
@@ -38,7 +85,7 @@
 						<p class="hotels-price">от&nbsp;<span class="hotels-price-amount">4000</span>&nbsp;<span class="hotels-price-currency">р.</span></p>
 						<p class="hotels-info-buttons"><a class="button" href="hotel-amara.html">Подробнее</a> <a class="button" href="hotel-booking.html">Забронировать</a></p>
 						<p>
-							<span class="hotels-stars">★★★★</span><br>
+							<span class="hotels-stars"><img src="img/star.svg" width="18" height="17" aria-label="Пятизвёздочный отель" alt=""><img src="img/star.svg" width="18" height="17" alt=""><img src="img/star.svg" width="18" height="17" alt=""><img src="img/star.svg" width="18" height="17" alt=""><img src="img/star.svg" width="18" height="17" alt=""></span><br>
 							<span class="hotels-rating">Рейтинг: 8,5</span>
 						</p>
 					</li>
@@ -49,7 +96,7 @@
 						<p class="hotels-price">от&nbsp;<span class="hotels-price-amount">3000</span>&nbsp;<span class="hotels-price-currency">р.</span></p>
 						<p class="hotels-info-buttons"><a class="button" href="hotel-amara.html">Подробнее</a> <a class="button" href="hotel-booking.html">Забронировать</a></p>
 						<p>
-							<span class="hotels-stars">★★★</span><br>
+							<span class="hotels-stars"><img src="img/star.svg" width="18" height="17" aria-label="Трёхзвёздочный отель" alt=""><img src="img/star.svg" width="18" height="17" alt=""><img src="img/star.svg" width="18" height="17" alt=""></span><br>
 							<span class="hotels-rating">Рейтинг: 8,9</span>
 						</p>
 					</li>
@@ -60,7 +107,7 @@
 						<p class="hotels-price">от&nbsp;<span class="hotels-price-amount">2000</span>&nbsp;<span class="hotels-price-currency">р.</span></p>
 						<p class="hotels-info-buttons"><a class="button" href="hotel-amara.html">Подробнее</a> <a class="button" href="hotel-booking.html">Забронировать</a></p>
 						<p>
-							<span class="hotels-stars">★★</span><br>
+							<span class="hotels-stars"><img src="img/star.svg" width="18" height="17"  aria-label="Двухзвёздочный отель" alt=""><img src="img/star.svg" width="18" height="17" alt=""></span><br>
 							<span class="hotels-rating">Рейтинг: 9,2</span>
 						</p>
 					</li>
@@ -69,9 +116,9 @@
 			<footer class="main-footer">
 				<p class="footer-hashtag">#visitsedona</p>
 				<ul class="footer-social">
-					<li><a class="social-button" href="#">Твиттер</a></li>
-					<li><a class="social-button" href="#">Фейсбук</a></li>
-					<li><a class="social-button" href="#">Youtube</a></li>
+					<li><a class="social-button social-button-twitter" href="#">Твиттер</a></li>
+					<li><a class="social-button social-button-facebook" href="#">Фейсбук</a></li>
+					<li><a class="social-button social-button-youtube" href="#">Youtube</a></li>
 				</ul>
 				<p class="footer-copyright">
 					<span>websity by</span>
