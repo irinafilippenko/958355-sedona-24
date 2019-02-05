@@ -40,6 +40,20 @@
 							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="wifi" id="select-wifi">
 							<label for="select-wifi">Wi-fi</label>
 							</li>
+							<!--
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="swimming-pool" value="swimming-pool" id="select-swimming-pool" checked>
+							<label for="select-swimming-pool">Бассейн</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="parking" value="parking" id="select-parking">
+							<label for="select-parking">Парковка</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="wifi" value="wifi" id="select-wifi">
+							<label for="select-wifi">Wi-fi</label>
+							</li>
+							-->
 						</ul>
 					</fieldset>
 					<fieldset>
@@ -57,6 +71,20 @@
 							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="apartments" id="select-apartments" checked>
 							<label for="select-apartments">Апартаменты</label>
 							</li>
+							<!--
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="hotel" value="hotel" id="select-hotel" checked>
+							<label for="select-hotel">Гостиница</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="motel" value="motel" id="select-motel" checked>
+							<label for="select-motel">Мотель</label>
+							</li>
+							<li class="select-option">
+							<input class="visually-hidden select-input-select-input-checkbox" type="checkbox" name="apartments" value="apartments" id="select-apartments" checked>
+							<label for="select-apartments">Апартаменты</label>
+							</li>
+							-->
 						</ul>
 					</fieldset>
 					<fieldset>
@@ -74,9 +102,18 @@
 			</section>
 			<section class="hotels">
 				<h2>найдено:3</h2>
-				<p>сортировка: <a class="hotels-sort" href="#">по цене</a> <a class="hotels-sort" href="#">по типу</a> <a class="hotels-sort" href="#">по рейтингу</a>
-				<span class="button hotels-sort-button-up">по возрастанию</span>
-				<span class="button hotels-sort-button-down">по убыванию</span></p>
+				<div class="sort">
+					<span>сортировка:</span>
+					<ul class="sort-parameters">
+						<li><a class="hotels-sort" href="#">по цене</a></li>
+						<li><a class="hotels-sort" href="#">по типу</a></li>
+						<li><a class="hotels-sort" href="#">по рейтингу</a></li>
+					</ul>
+					<ul class="sort-up-down">
+						<li><a class="button hotels-sort-button-up" href="#"><span class="visually-hidden">по возрастанию</span></a></li>
+						<li><a class="button hotels-sort-button-down" href="#"><span class="visually-hidden">по убыванию</span></a></li>
+					</ul>
+				</div>
 				<ul class="hotels-list">
 					<li class="hotels-item">
 						<h3><a class="hotels-detail" href="hotel-amara.html">Amara Resort & SPA</a></h3>
