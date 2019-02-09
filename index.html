@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Седона - город в Аризоне</title>
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
@@ -76,36 +78,37 @@
 				<h2>Заинтересовались?</h2>
 				<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				<a class="search-hotel" href="#">Поиск гостиницы в Седоне</a>
-				<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-					<p class="search-item">
-						<label for="search-date-arrival">Дата заезда:</label>
-						<input id="search-date-arrival" type="text" name="date-arrival" value="24 апреля 2017">
-						<button type="button" class="search-calendar" aria-label="Нажмите на календарик для выбора даты заезда"><img src="img/calendar.svg" alt=""></button>
-						<!--или svg-->
-					</p>
-					<p class="search-item">
-						<label for="search-date-departure">Дата выезда:</label>
-						<input id="search-date-departure" type="text" name="date-departure" value="4 июля 2017">
-						<button type="button" class="search-calendar" aria-label="Нажмите на календарик для выбора даты вызда"><img src="img/calendar.svg" alt=""></button>
-						<!--или svg-->
-					</p>
-					<p class="search-item">
-						<label for="search-number-adult">Взрослые:</label>
-						<span class="search-number-adults">
-							<button type="button" class="search-number-minus" aria-label="Уменьшить количество въезжающих взрослых">-</button>
-							<input id="search-number-adult" type="text" class="search-number" name="number-adults" value="2" maxlength="2">
-							<button type="button" class="search-number-plus" aria-label="Увеличить количество въезжающих взрослых">+</button>
-						</span>
-						<label for="search-number-kid">Дети:</label>
-						<span class="search-number-kids">
-							<button type="button" class="search-number-minus" aria-label="Уменьшить количество въезжающих взрослых">-</button>
-							<input id="search-number-kid" type="text" class="search-number" name="number-kids" value="0" maxlength="2">
-							<button type="button" class="search-number-plus" aria-label="Увеличить количество въезжающих взрослых">+</button>
-						</span>
-					</p>
-					
-					<button class="button" type="submit">Найти</button>
-				</form>
+				<div class="search-container">
+					<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+						<p class="search-item">
+							<label for="search-date-arrival">Дата заезда:</label>
+							<input id="search-date-arrival" type="text" name="date-arrival" value="24 апреля 2017" placeholder="24 апреля 2017">
+							<button class="search-calendar" type="button" aria-label="Нажмите на календарик для выбора даты заезда"><img src="img/calendar.svg" alt=""></button>
+							<!--или svg-->
+						</p>
+						<p class="search-item">
+							<label for="search-date-departure">Дата выезда:</label>
+							<input id="search-date-departure" type="text" name="date-departure" value="4 июля 2017" placeholder="4 июля 2017">
+							<button class="search-calendar" type="button" aria-label="Нажмите на календарик для выбора даты вызда"><img src="img/calendar.svg" alt=""></button>
+							<!--или svg-->
+						</p>
+						<p class="search-item">
+							<label for="search-number-adult">Взрослые:</label>
+							<span class="search-number-adults">
+								<button class="search-number-minus" type="button" aria-label="Уменьшить количество въезжающих взрослых">-</button>
+								<input class="search-number" id="search-number-adult" type="text" name="number-adults" value="2" maxlength="2">
+								<button class="search-number-plus" type="button" aria-label="Увеличить количество въезжающих взрослых">+</button>
+							</span>
+							<label for="search-number-kid">Дети:</label>
+							<span class="search-number-kids">
+								<button class="search-number-minus" type="button" aria-label="Уменьшить количество въезжающих взрослых">-</button>
+								<input class="search-number" id="search-number-kid" type="text" name="number-kids" value="0" maxlength="2">
+								<button class="search-number-plus" type="button" aria-label="Увеличить количество въезжающих взрослых">+</button>
+							</span>
+						</p>
+						<button class="button" type="submit">Найти</button>
+					</form>
+				</div>
 			</section>
 			<footer class="main-footer">
 				<p class="footer-hashtag">#visitsedona</p>
