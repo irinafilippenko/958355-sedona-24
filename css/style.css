@@ -1,0 +1,395 @@
+body {
+	margin: 0;
+	
+	font-family: "PT Sans", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	/*font-weight: normal;*/
+	color: #333333;
+	text-transform: uppercase;
+	
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;	
+}
+
+.main-navigation {
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	
+	background-color: #ffffff;	
+}
+
+.site-navigation {
+	list-style: none;	
+}
+
+.site-navigation a{
+  color: #000000;
+}
+
+.site-navigation a:hover{
+  color: #a3c7de;
+}
+
+.site-navigation a:focus{
+  color: #b2b2b2;
+}
+
+.site-navigation a:active{
+  color: #766357;
+}
+
+h1 {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;	
+}
+
+.reasons h2 {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: normal;
+	color: #333333;
+}
+
+.city-welcome {
+	background-color: #ffffff;
+	background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
+	background-size: 1200px 60px, 1200px 510px;
+	background-position: 0px 450px, 0px 0px;
+	background-repeat: no-repeat, no-repeat;
+}
+
+.reasons-list {
+	list-style: none;	
+}
+
+.reasons-item:nth-child(-n+2){
+	background-color: #81b3d2;
+}
+
+.reasons-item:nth-child(n+3){
+	background-color: #eeeeee;
+}
+
+.reasons-item {
+	text-align: center;	
+}
+
+.reasons-item h3 {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.reasons-item:nth-child(n+3) h3 {
+	color: #000000;
+}
+
+.reasons-item:nth-child(-n+2) p{
+	color: #ffffff;
+}
+
+.reasons-attractions-list {
+	list-style: none;	
+}
+
+.reasons-attractions-list li{
+	text-align: center;	
+}
+
+.reasons-attractions-list h4{
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;	
+}
+
+.search h2{
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 700;
+	color: #000000;
+
+	text-align: center;	
+}
+
+.search h2 + p{
+	line-height: 24px;
+
+	text-align: center;	
+}
+
+.search a {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+	background-color: #766357;
+}
+
+.search a:hover{
+	background-color: #604e43;
+}
+.search a:focus {
+	color: #857871;
+	background-color: #503e33;
+}
+
+.search-container{
+	background-image: url("../img/map.jpg");
+	background-size: 1200px 473px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+.search-form{
+	background-color: #ffffff;
+}
+
+.search-form label{
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.search-form input[type="text"] {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+	text-transform: uppercase;
+	
+	background-color: #f2f2f2;
+}
+
+.search-form input[type="text"]:hover{
+	background-color: #ebebeb;
+}
+.search-form input[type="text"]:focus {
+	background-color: #ffffff;
+}
+
+.search-form button[type="submit"] {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	background-color: #81b3d2;
+
+	text-align: center;
+}
+
+.search-form button[type="submit"]:hover{
+	background-color: #669ec0;
+}
+.search-form button[type="submit"]:focus {
+	color: #88b6d1;
+	background-color: #5496bd;
+}
+
+.main-footer {
+	color: #000000;
+	
+	background-color: #ffffff;
+}
+
+.footer-hashtag{
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	
+	text-align: center;
+}
+
+.footer-social {
+	list-style: none;
+		
+	text-align: center;
+}
+
+.social-button {
+	color: #ffffff;
+	
+	background-color: #81b3d2;
+}
+
+.footer-copyright {
+	text-align: center;
+}
+
+.footer-copyright .button{
+	color:#000000;
+}
+
+.footer-copyright .button:hover{
+	color:#81b3d2;
+}
+
+.footer-copyright .button:focus{
+	color:#bdbbbc;
+}
+
+.select-parameters {
+	background-color: #ffffff;	
+	background-image: url("../img/filter-background.jpg");
+	/*высота для видимости (белый текст)*/
+	background-size: 1200px 440px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
+.select {
+	color: #ffffff;
+}
+
+.select ul{
+	list-style: none;	
+}
+
+.select fieldset{
+	border-width: 0;	
+}
+
+.select legend{
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 700;	
+}
+
+.range-controls span{
+	font-size: 14px;
+	line-height: 21px;
+	color: #ffffff;
+	
+	border: 2px solid #ffffff;
+}
+
+.select-button{
+	font-size: 14px;
+	line-height: 21px;
+	color: #ffffff;
+	text-transform: uppercase;
+	text-align:center;
+	
+	background-color: rgba(255, 255, 255, 0);
+	border: 2px solid #ffffff;
+}
+
+.hotels h2 {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+.hotels p {
+	font-size: 12px;
+	line-height: 18px;
+	color: #000000;
+}
+
+a.hotels-sort {
+	font-size: 12px;
+	line-height: 18px;
+	color: #b2b2b2;
+	
+	border-bottom: 1px dashed #81b3d2;
+}
+
+a.hotels-sort:hover{
+	color: #81b3d2;
+	
+	border-bottom: 1px dashed #81b3d2;
+}
+
+a.hotels-sort:focus {
+	color: #000000;
+	
+	border-width: 0;
+}
+
+a.hotels-sort:active{
+	color: #81b3d2;
+	
+	border-width: 0;
+}
+
+.hotels ul{
+	list-style: none;	
+}
+
+.hotels h3 {
+	font-size: 24px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #000000;
+}
+
+a.hotels-detail{
+	color: #000000;
+}
+
+a.hotels-detail:hover{
+	color: #81b3d2;
+}
+
+a.hotels-detail:focus{
+	color: #b2b2b2;
+}
+
+.hotels-info-buttons a.button{
+	font-weight: 700;
+}
+
+a.button-details {
+	color: #ffffff;
+	
+	background-color: #81b3d2;
+}
+
+a.button-details:hover {
+	color: #ffffff; 
+	
+	background-color: #669ec0;
+}
+
+a.button-details:focus {
+	color: #88b6d1;
+	
+	background-color: #669ec0;
+}
+
+a.button-booking {
+	color: #ffffff;
+	
+	background-color: #766357;
+}
+
+a.button-booking:hover {
+	color: #ffffff; 
+	
+	background-color: #604e43;
+}
+
+a.button-booking:focus {
+	color: #7b6d65;
+	
+	background-color: #604e43;
+}
+
+p.hotels-class {
+	text-align: right;
+}
+
+span.hotels-rating {
+	background-color: #f2f2f2;
+}
