@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	position: relative;
 	
 	font-family: "PT Sans", Arial, sans-serif;
 	font-size: 14px;
@@ -10,9 +11,29 @@ body {
 	
 	background-color: #ffffff;
 }
-.site-navigation li
+
 a {
-	text-decoration: none;	
+	text-decoration: none;
+}
+
+/* .visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden */ 
+
+.visually-hidden:not(:focus):not(:active) {
+	position:absolute;
+	
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	
+	white-space: nowrap;
+	
+	clip-path: inset(100%);
+	clip: rect:(0 0 0 0);
+	overflow: hidden;
 }
 
 .main-navigation {
@@ -62,8 +83,8 @@ h1 {
 .city-welcome {
 	background-color: #ffffff;
 	background-image: url("../img/intro-mask.svg"), url("../img/background-photo.jpg");
-	background-size: 1200px 60px, 1200px 510px;
-	background-position: 0px 450px, 0px 0px;
+	background-size: 1200px 60px, 100%;
+	background-position: 0px 450px, 50% 21%;
 	background-repeat: no-repeat, no-repeat;
 }
 
@@ -71,16 +92,17 @@ h1 {
 	list-style: none;	
 }
 
-.reasons-item:nth-child(-n+2){
+/* .reasons-item:nth-child(-n+2){
 	background-color: #81b3d2;
-}
+} */
 
-.reasons-item:nth-child(n+3){
-	background-color: #eeeeee;
-}
+/* .reasons-attractions-list{
+	background-color: #ffffff;
+	border: 1px solid black;
+} */
 
 .reasons-item {
-	text-align: center;	
+	text-align: center;
 }
 
 .reasons-item h3 {
@@ -247,6 +269,12 @@ h1 {
 	border: 2px solid #ffffff;
 }
 
+.select-button:hover {
+	color: #000000;
+
+	background-color: #ffffff;
+}
+
 .hotels h2 {
 	font-size: 21px;
 	line-height: 26px;
@@ -299,7 +327,6 @@ a.hotels-sort:active{
 
 a.hotels-detail{
 	color: #000000;
-	text-decoration: none;
 }
 
 a.hotels-detail:hover{
@@ -361,6 +388,9 @@ span.hotels-rating {
 }
 
 .main-footer {
+	position: absolute;
+	left: 0;
+	top: 100%;
 	color: #000000;
 	
 	background-color: #ffffff;
@@ -403,11 +433,11 @@ span.hotels-rating {
 }
 
 /* сетка */
-html,
+/* html,
 body {
 	min-width: 1280px;
 	min-height: 2762px;
-}
+} */
 
 .container {
 	width: 1200px;
@@ -425,13 +455,17 @@ body {
 }
 
 .site-navigation li{
-	width: 239px;
+	width: 20%;
 	text-align: center;
-	padding: 16px 0px;
+	padding: 15px 0px;
 }
 
 .site-navigation li:nth-child(2){
-	margin-right: 244px;
+	margin-right: auto;
+}
+
+.site-navigation li:nth-child(3){
+	margin-left: auto;
 }
 
 .main-header-logo {
@@ -444,11 +478,18 @@ body {
 
 .city-welcome {
 	width: 1200px;
-	height: 500px;
-	margin-bottom: 66px;
+	height: 508px;
+	margin-bottom: 58px;
+	display: flex;
+}
+
+.city-welcome img{
+	margin: auto;
 }
 
 h1 {
+	width:442px;
+	margin: auto;
 	margin-bottom: 28px;
 }
 
@@ -463,50 +504,38 @@ h1 {
 	padding: 0;
 }
 
+/*33,33333 у меня не идёт
+задала 33% + flex-grow чтобы растянулись 
+и цвет фона у строки для перестраховки (возможно лишнее)*/
 .reasons-item {
-	width: 400px;
-		/*для сетки*/
+	width: 33%;
+	flex-grow: 1;
+	/*для сетки*/
 	min-height: 256px;
 }
 
-.reasons-item:nth-child(-n+2),
-.reasons-item:last-child {
-	width: 1200px;
+/* чтобы текст переносился по строкам (возможно спорное решение) */
+.reasons-item p {
+	display: block;
+	padding: 0 62px;
+	margin: auto;
 }
 
-.reasons-item:nth-child(n+2):nth-child(-n+5){
+.reasons-item_long {
+	width: 100%;
+}
+
+.reasons-item_blue {
+	display: flex;
+	background-color: #81b3d2;
+}
+
+.reasons-item_grey {
+	background-color: #eeeeee;
+}
+
+.reasons-item_num{
 	order: 1;
-}
-
-.reasons-item:nth-child(n+3):nth-child(-n+5){
-	min-height: 230px;
-	padding-top: 26px;
-}
-
-.reasons-item_realcity {
-	position: relative;
-	padding-right: 800px;
-	padding-top: 26px;
-	padding-bottom: 44px;
-}
-
-.reasons-realcity {
-	position: absolute;
-	top: 0px;
-	left: 400px;
-}
-
-.reasons-item-bridge {
-	position: relative;
-	padding-left: 800px;
-	padding-top: 26px;
-	padding-bottom: 44px;
-}
-
-.reasons-bridge {
-	position: absolute;
-	top: 0px;
-	left: 0px;
 }
 
 .reasons-attractions-list {
@@ -516,10 +545,7 @@ h1 {
 	padding: 0;
 	/*для сетки*/
 	min-height: 330px;
-}
-
-.reasons-attractions-list li {
-	width: 400px;
+	background-color: #ffffff;
 }
 
 .search h2{
@@ -541,10 +567,6 @@ h1 {
 	min-height: 288px;
 }
 
-.search-container p{
-	margin: 0;
-}
-
 .search-hotel {
 	display: block;
 	width: 568px;
@@ -552,6 +574,14 @@ h1 {
 	margin-top: 48px;
 	text-align: center;
 	padding: 30px 0;
+}
+
+.search-item {
+	display: flex;	
+}
+
+.search-item-people {
+	width: 50%;
 }
 
 .search-form button[type="submit"] {
@@ -602,8 +632,8 @@ h1 {
 
 .container-hotels-sort{
 	display: flex;
-	align-items: baseline;
-	padding: 0px 73px;
+	align-items: center;
+	padding: 0 73px 30px 73px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -642,19 +672,31 @@ h1 {
 
 .hotels-item {
 	display: flex;
-	padding: 20px 73px;
+	padding: 20px 73px 2px 73px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
 .container-hotels-detail{
-	width: 423px;
-	/*для сетки*/
-	min-height: 92px;
+	display: flex;
+	flex-wrap:wrap;
+	width: 260px;
+	padding: 0 30px;
+
 }
 
 .container-hotels-detail h3{
-	margin: 0;
-	padding: 0;
+	width: 100%;
+}
+
+.container-hotels-detail h3,
+p {
+	margin: 0 0 18px 0;
+}
+
+.hotels-type,
+.hotels-info-buttons {
+	width: 43%;
+	margin-right: 7px;
 }
 
 .hotels-class{
@@ -664,7 +706,7 @@ h1 {
 	min-height: 92px;
 }
 
-span.hotels-rating{
+span.hotels-rating {
 	display: block;
 	width: 112px;
 	padding: 5px;
@@ -673,10 +715,16 @@ span.hotels-rating{
 	min-height: 18px;
 }
 
-.main-footer{
+.main-footer {
+	width: 100%;
+}
+
+.main-footer div{
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	padding: 40px 70px;
+	box-sizing: border-box;
 	background-color: rgba(255, 255, 255, 0.9);
 	/*для сетки*/
 	min-height: 120px;
@@ -691,6 +739,9 @@ span.hotels-rating{
 
 .footer-social{
 	width: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	/*для сетки*/
 	min-height: 48px;
 }
