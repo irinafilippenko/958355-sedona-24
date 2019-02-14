@@ -13,6 +13,7 @@
 				<a class="main-header-logo">
 					<img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип городка Седона">
 				</a>
+				<!--Задала и пунктам меню по 20% ширину, если не так, то поменяю обратно.-->
 				<ul class="site-navigation">
 					<li><a href="info.html">Информация</a></li>
 					<li><a href="photo-video.html">Фото и видео</a></li>
@@ -25,54 +26,56 @@
 			<div class="city-welcome">
 				<img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
 			</div>
-			<h1>Седона - небольшой городок в Аризоне,<br>заслуживающий большего!</h1>
+			<h1>Седона&nbsp;&mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
 			<section class="reasons">
 				<h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
 				<ol class="reasons-list">
-					<li class="reasons-item">
-						<div class="reasons-item_realcity">
+				<!--Убрала nth-child и везде добавила классы.
+				Не знаю: так или перебор.-->
+					<li class="reasons-item reasons-item_long reasons-item_blue">
+						<div class="reasons-item-realcity">
 							<h3>Настоящий<br>городок</h3>
 							<p>- №1 -</p>
-							<p>Седона - на аттракцион для туристов,<br>там течёт своя жизнь</p>
-							<img class="reasons-realcity" src="img/realcity.jpg" width="800" height="256" alt="Уютная улочка городка Седона">
+							<p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
 						</div>
+						<img class="reasons-realcity" src="img/realcity.jpg" width="800" height="256" alt="Уютная улочка городка Седона">
 					</li>
-					<li class="reasons-item">
+					<li class="reasons-item reasons-item_long reasons-item_blue reasons-item_long reasons-item_num">
+					<img class="reasons-bridge" src="img/bridge.jpg" width="800" height="256" alt="Арочный мост дьявола">
 						<div class="reasons-item-bridge">
-							<img class="reasons-bridge" src="img/bridge.jpg" width="800" height="256" alt="Арочный мост дьявола">
 							<h3>Там есть<br>мост дьявола</h3>
 							<p>- №2 -</p>
-							<p>Да, по нему можно пройти! Если конечно<br>вы осмелитесь</p>
+							<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 						</div>
 					</li>
-					<li class="reasons-item">
+					<li class="reasons-item reasons-item_grey reasons-item_num">
 						<h3>Небольшая<br>площадь</h3>
 						<p>- №3 -</p>
-						<p>Все достопримечательности<br>находятся очень близко</p>
+						<p>Все достопримечательности находятся очень близко</p>
 					</li>
-					<li class="reasons-item">
+					<li class="reasons-item reasons-item_grey reasons-item_num">
 						<h3>Красивая<br>дорога</h3>
 						<p>- №4 -</p>
-						<p>Ехать в Седону из Лас-Вегаса совсем<br>не скучно!</p>
+						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 					</li>
-					<li class="reasons-item">
+					<li class="reasons-item reasons-item_grey reasons-item_num">
 						<h3>Мало<br>туристов</h3>
 						<p>- №5 -</p>
-						<p>Большинство едет в Гранд Каньон и<br>толпится там</p>
+						<p>Большинство едет в Гранд Каньон и толпится там</p>
 					</li>
-					<li>
+					<li class="reasons-item reasons-item_long">
 						<ul class="reasons-attractions-list">
 							<li class="reasons-attractions-home">
 								<h4>Жильё</h4>
-								<p>Рекомендуем пожить в настоящем<br>мотеле, всё как в кино!</p>
+								<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
 							</li>
 							<li class="reasons-attractions-food">
 								<h4>Еда</h4>
-								<p>Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
+								<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 							</li>
 							<li class="reasons-attractions-souvenirs">
 								<h4>Сувениры</h4>
-								<p>Не только китайского, но и местного<br>производства!</p>
+								<p>Не только китайского, но и местного производства!</p>
 							</li>
 						</ul>
 					</li>
@@ -85,38 +88,44 @@
 					<a class="search-hotel" href="#">Поиск гостиницы в Седоне</a>
 					<div class="search-container">
 						<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-						<p class="search-item">
+						<div class="search-item">
 							<label for="search-date-arrival">Дата заезда:</label>
 							<input id="search-date-arrival" type="text" name="date-arrival" value="24 апреля 2017" placeholder="24 апреля 2017">
 							<button class="search-calendar" type="button" aria-label="Нажмите на календарик для выбора даты заезда"><img src="img/calendar.svg" alt=""></button>
 							<!--или svg-->
-						</p>
-						<p class="search-item">
+						</div>
+						<div class="search-item">
 							<label for="search-date-departure">Дата выезда:</label>
 							<input id="search-date-departure" type="text" name="date-departure" value="4 июля 2017" placeholder="4 июля 2017">
 							<button class="search-calendar" type="button" aria-label="Нажмите на календарик для выбора даты вызда"><img src="img/calendar.svg" alt=""></button>
 							<!--или svg-->
-						</p>
-						<p class="search-item">
-							<label for="search-number-adult">Взрослые:</label>
-							<span class="search-number-adults">
-								<button class="search-number-minus" type="button" aria-label="Уменьшить количество въезжающих взрослых">-</button>
-								<input class="search-number" id="search-number-adult" type="text" name="number-adults" value="2" maxlength="2">
-								<button class="search-number-plus" type="button" aria-label="Увеличить количество въезжающих взрослых">+</button>
-							</span>
-							<label for="search-number-kid">Дети:</label>
-							<span class="search-number-kids">
-								<button class="search-number-minus" type="button" aria-label="Уменьшить количество въезжающих взрослых">-</button>
-								<input class="search-number" id="search-number-kid" type="text" name="number-kids" value="0" maxlength="2">
-								<button class="search-number-plus" type="button" aria-label="Увеличить количество въезжающих взрослых">+</button>
-							</span>
-						</p>
+						</div>
+						<div class="search-item">
+							<div class="search-item-people">
+								<label for="search-number-adult">Взрослые:</label>
+								<span class="search-number-adults">
+									<button class="search-number-minus" type="button" aria-label="Уменьшить количество въезжающих взрослых">-</button>
+									<input class="search-number" id="search-number-adult" type="text" name="number-adults" value="2" maxlength="2">
+									<button class="search-number-plus" type="button" aria-label="Увеличить количество въезжающих взрослых">+</button>
+								</span>
+							</div>
+							<div class="search-item-people">
+								<label for="search-number-kid">Дети:</label>
+								<span class="search-number-kids">
+									<button class="search-number-minus" type="button" aria-label="Уменьшить количество въезжающих взрослых">-</button>
+									<input class="search-number" id="search-number-kid" type="text" name="number-kids" value="0" maxlength="2">
+									<button class="search-number-plus" type="button" aria-label="Увеличить количество въезжающих взрослых">+</button>
+								</span>
+							</div>
+						</div>
 						<button class="button" type="submit">Найти</button>
 						</form>
 					</div>
 				</div>
 			</section>
-			<footer class="main-footer">
+		</main>
+		<footer class="main-footer">
+			<div class="container">
 				<p class="footer-hashtag">#visitsedona</p>
 				<ul class="footer-social">
 					<li><a class="social-button social-button-twitter" href="#"><span class="visually-hidden">Твиттер</span></a></li>
@@ -127,7 +136,7 @@
 					<span>websity by</span>
 					<a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
 				</p>
-			</footer>
-		</main>
+			</div>
+		</footer>
 	</body>
 </html>
