@@ -234,9 +234,13 @@ input[type="range"].visually-hidden {
 }
 
 .reasons-item-photo {
-	height: 256px;
+	height: 100%;
 	margin: auto;
 	overflow: hidden;
+}
+
+.reasons-item-photo img {
+	display: block;
 }
 
 .reasons-item_grey {
