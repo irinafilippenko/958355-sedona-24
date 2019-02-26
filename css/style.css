@@ -1165,9 +1165,13 @@ label[for="search-number-kid"] {
 	display: flex;
 }
 
-.container-hotels-detail h3,
-.container-hotels-type p {
+.container-hotels-detail h3 {
 	padding: 0;
+	margin: 0 7px 0 0;
+}
+
+.container-hotels-type p {
+	padding: 7px 0 0 0;
 	margin: 0 7px 0 0;
 }
 
