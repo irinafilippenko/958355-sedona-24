@@ -11,9 +11,12 @@
 	
 	var isStorageSupport = true;
 
+	popup.classList.add("visually-hidden");
+	
 	link.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup.classList.toggle("search-container_show");
+	popup.classList.toggle("visually-hidden");
 	popup.classList.remove("search-container_error");
 	date_arrival.focus();
 	try {
