@@ -798,7 +798,7 @@ label[for="search-number-kid"] {
 
 .button.disabled,
 .button:disabled{
-	cursor: default;
+	cursor: not-allowed;
 	opacity: 0.5;
 	background-color: #81b3d2; 
 } 
@@ -1054,7 +1054,7 @@ label[for="search-number-kid"] {
 	cursor: pointer;
 }
 
-.select-option input[type="checkbox"]  + .checkbox-indicator::before {
+.select-input-checkbox[type="checkbox"]  + .checkbox-indicator::before {
 	content: "";
 	
 	position: absolute;
@@ -1068,17 +1068,17 @@ label[for="search-number-kid"] {
 	background-repeat: no-repeat;
 }
 	
-.select-option input[type="checkbox"]:checked  + .checkbox-indicator::before {
+.select-input-checkbox[type="checkbox"]:checked  + .checkbox-indicator::before {
 	background-image: url("../img/checkbox-on.svg");
 	background-repeat: no-repeat;
 }
 
-.select-option input[type="checkbox"]:disabled  + .checkbox-indicator::before,
-.select-option input[type="checkbox"]:disabled  + .checkbox-indicator {
+.select-input-checkbox[type="checkbox"]:disabled  + .checkbox-indicator::before,
+.select-input-checkbox[type="checkbox"]:disabled  + .checkbox-indicator {
 	opacity: 0.5;
 }
 
-.select-option input[type="checkbox"]:focus  + .checkbox-indicator {
+.select-input-checkbox[type="checkbox"]:focus  + .checkbox-indicator {
 	outline: 1px solid #f2f2f2;
 }
 
